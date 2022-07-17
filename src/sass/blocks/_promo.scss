@@ -1,8 +1,12 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url('../img/realmain_bg.png') no-repeat 50%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/realmain_bg.png") no-repeat 10%/cover;  
     padding-top: 205px;
+    
+    z-index: 1;
+    overflow: hidden;
+     
     &__title {
         width: 535px;
         margin-top: 10px;
@@ -10,7 +14,6 @@
     &__subtitle {
         position: relative;
         padding-left: 10px;
-        z-index: 2;
         @include before_circle;
     }
     &__btns {
@@ -30,4 +33,5 @@
         }
     }
 }
+
 

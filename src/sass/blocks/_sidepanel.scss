@@ -25,5 +25,10 @@
     }
     .icolor{
         filter: invert(100%);
+        transition: 0.5s all;
+        :hover {
+            transition: 0.5s all;
+            filter: invert(100%);
+        }
     }
 }
