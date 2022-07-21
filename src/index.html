@@ -397,11 +397,11 @@
     
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input name="name" id="name" type="text">
+                            <input required name="name" id="name" type="text">
                             <label for="name">Your name</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="email">Your email</label>
                         </div>
     
@@ -409,7 +409,13 @@
                             <textarea name="text" id="text"></textarea>
                             <label for="text">Your message</label>
                         </div>
-                        <button class="contacts__btn btn">Send a message</button>
+                        <div class="contacts__triggers">
+                            <button class="contacts__btn btn">Send a message</button>
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>I agree with the <a href="/policy.html">privacy policy</a></span>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
