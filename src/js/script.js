@@ -10,9 +10,10 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-const counters = document.querySelectorAll('.procent__number'), 
-      lines = document.querySelectorAll('.procent__line span');
+const counters = document.querySelectorAll('.skills__ratings-counter'),
+      lines = document.querySelectorAll('.skills__ratings-line span');
 
-counters.forEach((item, i) => {
+counters.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
+

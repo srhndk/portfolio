@@ -1,35 +1,71 @@
 .portfolio {
-    margin-top: 120px;
+    position: relative;
+    padding-top: 120px;
     &__wrapper {
-        display: grid; 
         margin-top: 60px;
-        grid-template: repeat(2, 280px) /repeat(4, 280px);
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
         grid-auto-rows: 280px;
         gap: 5px;
         .vertical {
-            grid-row: 1/3;
-            grid-column: 4/5;
+            grid-row: 1 / 3;
+            grid-column: 4 / 5;
         }
-        .horizontal {
-            grid-row: 2/3;
-            grid-column: 2/4;
+        .horizonal {
+            grid-row: 2 / 3;
+            grid-column: 2 / 4;
         }
     }
     &__item {
-        position: relative;
         transition: all 0.6s;
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
+            &:hover {
+                transform: scale(1.02);
+                filter: grayscale(50%);
+            }
+        
+        
+    }
+    &__textblock {
+        position: absolute;
+        height: 280px;
+        width: 280px;
+       /*  &-vertical {
+            height: 565px;
+            width: 280px;
+        } */
+        /* &-horizontal {
+
+        } */
+    }
+    &__text {
+        /* height: 280px;
+        width: 280px; */
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        padding: 116px 99px;
+        left: 0;
+        top: 0;
+        color: aliceblue;
+        font-weight: 700px;    
+        font-size: 30px; 
+        transition: 0.6s all;
+        opacity: 0;
         &:hover {
-            transform: scale(1.05);
-            filter: grayscale(50%);
+            opacity: 1;
+            letter-spacing: 5px;
+            left: -5px;
         }
-        &-text {
-            height: 280px;
+        &-vertical {
+            height: 565px;
             width: 280px;
             position: absolute;
-            padding: 116px 99px;
+            padding: 230px 99px;
             left: 0;
             top: 0;
             color: aliceblue;
@@ -41,9 +77,26 @@
                 opacity: 1;
                 letter-spacing: 5px;
                 left: -5px;
-            }  
+            }
+        }
+        &-horizontal {
+            height: 280px;
+            width: 565px;
+            position: absolute;
+            padding: 116px 220px;
+            left: 0;
+            top: 0;
+            color: aliceblue;
+            font-weight: 700px;    
+            font-size: 30px; 
+            transition: 0.6s all;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                letter-spacing: 5px;
+                left: -5px;
+            }
         }
     }
-    
 
 }
