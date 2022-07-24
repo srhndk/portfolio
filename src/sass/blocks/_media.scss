@@ -51,6 +51,11 @@
             }
         }
     }
+    .portfolio__text-horizontal {
+        height: 280px;
+        width: 280px;
+        padding: 0;
+    }
     .contacts {
         &__wrapper {
             padding: 0;
@@ -233,7 +238,6 @@
         }
     }
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 57%/cover;
         &__btns {
             margin-top: 30px;
         }
